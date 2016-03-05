@@ -1,0 +1,13 @@
+site_name: Jiztom
+pages:
+- Home: index.md
+- RaspberryPi : raspberrypi.md
+- Quick-start : quickstart.md
+- DHT11 : DH11.md
+- Setting up DHT11 sensor : setting_up_DHT11.md
+- Ubidots : ubidots.md
+- DHT11 python script : DHT11script.md
+- Check : check.md
+- Autostart enabling : launcher.md
+- About: about.md
+theme: readthedocs 

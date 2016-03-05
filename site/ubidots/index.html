@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Ubidots - Jiztom</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Ubidots";
+    var mkdocs_page_input_path = "ubidots.md";
+    var mkdocs_page_url = "/ubidots/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Jiztom</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../raspberrypi/">RaspberryPi</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../quickstart/">Quick-start</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../DH11/">DHT11</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../setting_up_DHT11/">Setting up DHT11 sensor</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Ubidots</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#ubidots">Ubidots</a></li>
+                
+                    <li><a class="toctree-l4" href="#what-is-ubidots">What is Ubidots?</a></li>
+                
+                    <li><a class="toctree-l4" href="#glossary">Glossary</a></li>
+                
+                    <li><a class="toctree-l4" href="#ubidots-python-api-client">Ubidots Python API Client.</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../DHT11script/">DHT11 python script</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../check/">Check</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../launcher/">Autostart enabling</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../about/">About</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Jiztom</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Ubidots</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="ubidots">Ubidots</h1>
+<h3 id="what-is-ubidots">What is Ubidots?</h3>
+<p><p>Ubidots helps you create applications that capture real-world data 
+and turn it into meaningful actions and insights.</p>
+<img alt="Working_ubidots_interaction" src="../img/ubidots1.jpg" />
+<p>They think that we shouldn’t have to be a web/data expert, or hire 
+one,in order to stream your sensor data to the cloud and extract its 
+full value through real-time visualizations.</p></p>
+<h3 id="glossary">Glossary</h3>
+<p><p>Before you get started with our API, here are a few concepts your 
+should get familiar with:</p></p>
+<p><b> Data Source</b>
+  <p>A data source is your connected device. Every data source can have 
+  one or more variables, each one containing values in a time series. 
+  For example, a “Smart Sprinkler” would be a data source, while its 
+  variables would be soil humidity and temperature.</p></p>
+<p><b>Variable</b>
+  <p>A variable is a series of data that change over time. For example, 
+  a bike’s variables could be speed and GPS.</p></p>
+<p><b>Value</b>
+  <p>The measurement of the variable at a given point in time. For 
+  example, “the value of the room’s temperature was 70°F at 15:02:33 
+  EDT”</p></p>
+<p><b>Event</b>
+  <p>Events are “IF ... THEN ...” statements that are triggered 
+  depending of the last value of a variable. For example, you can set 
+  your sprinkler to send you an SMS if the humidity level is above a 
+  given value.</p></p>
+<p><b>Widget</b>
+  <p>Widgets are custom visualizations of your data that help you 
+  extract the value of it. You can condense a whole data set into one 
+  meaningful sentence, map or graph. For example, if a variable measures 
+  how many people looks at a product on a shelf,then use the “Statement” 
+  widget to display something like: “A total of 4.503 people have looked 
+  at the monkey in the display case”.</p></p>
+<h2 id="ubidots-python-api-client">Ubidots Python API Client.</h2>
+<p><p>The Ubidots Python API Client makes calls to the Ubidots Api. 
+The module is available on PyPI as “ubidots”.</p></p>
+<p>To follow this quickstart you’ll need to have pyton 2.7 in your 
+machine (be it a computer or an python-capable device), which you can 
+download at <a href="http://www.python.org/download/">www.python.org</a></p>
+<h3 id="installing-the-python-library">Installing the Python library</h3>
+<p>Ubidots for python is available in PyPI and you can install it from the 
+command line:</p>
+<pre><code>$ pip install ubidots==1.6.3
+</code></pre>
+<p>Don’t forget to use sudo if necessary.
+You can install pip in Linux and Mac using this command:</p>
+<pre><code>$ sudo easy_install pip
+</code></pre>
+<p>If you don’t have easy_install, you can get it through apt-get on 
+Debian-based distributions:</p>
+<pre><code>$ sudo apt-get install python-setuptools
+</code></pre>
+<p>If you are using Microsoft Windows you can install pip from 
+<a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#pip">here</a>.</p>
+<h3 id="configure-your-raspberry-pi-to-ubidots-cloud">Configure your Raspberry Pi to Ubidots cloud</h3>
+<ol>
+<li>
+<p>Let’s make sure your device is up to date so that it has the latest python tools (be aware that this will take a while):</p>
+<pre><code>$ sudo apt-get update
+$ sudo apt-get upgrade
+</code></pre>
+</li>
+<li>
+<p>Download the pip installer and install Ubidots’ Python library</p>
+<pre><code>$ sudo apt-get install python-setuptools
+$ sudo easy_install pip
+$ sudo pip install ubidots
+</code></pre>
+</li>
+</ol>
+<h3 id="setup-a-test-variable-in-ubidots">Setup a test Variable in Ubidots</h3>
+<ol>
+<li>As a <a href="http://app.ubidots.com/accounts/signin/">logged in user</a> navigate to the <b>“Data”</b> tab.</li>
+<li>Create a Data Source by clicking on the orange icon on the right. Then create a variable within that Data Source.</li>
+<li>Take note of the variable’s ID to which you want to send data. For this example we’ll use a variable with the ID: “521d792df91b2816f35c8587”</li>
+<li>Take note of your <a href="http://app.ubidots.com/userdata/api/">API key</a>.</li>
+</ol>
+<h3 id="send-data-to-ubidots">Send data to Ubidots</h3>
+<p>Coming back to your Raspberry Pi:</p>
+<ol>
+<li>
+<p>Create a directory called “ubidots” where you can put this and future scripts:</p>
+<pre><code>$ mkdir ubidots
+</code></pre>
+<p>Create a python script using your favorite text-editor. We’ll use “nano” in this case:</p>
+<pre><code>$ cd ubidots
+$ nano ubi-test.py
+</code></pre>
+</li>
+<li>
+<p><p>Put the following code into the created file. Please note the fields where you should put your API key and your variable ID.</p></p>
+<pre><code>from ubidots import ApiClient
+import random
+######Create an "API" object
+api = ApiClient("7fj39fk3044045k89fbh34rsd9823jkfs8323")
+######Create a "Variable" object
+test_variable = api.get_variable("521d792df91b2816f35c8587")
+######Here is where you usually put the code to capture the data, either through your GPIO pins or as a calculation. We'll simply put a random value here:
+test_value = random.randint(1,100)
+######Write the value to your variable in Ubidots
+test_variable.save_value({'value':test_value})
+</code></pre>
+</li>
+<li>
+<p>Run the code several times to send some random values to the cloud:</p>
+<pre><code>$ python ubi-test.py
+</code></pre>
+<p>You should now see some data-points in your browser!
+<img alt="udidots data" src="../img/ubidots2.jpg" /></p>
+</li>
+</ol>
+<p>Once your data is in the cloud, it’s all down the hill. You can trigger events according to your data, create insights to share, etc.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../DHT11script/" class="btn btn-neutral float-right" title="DHT11 python script">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../setting_up_DHT11/" class="btn btn-neutral" title="Setting up DHT11 sensor"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../setting_up_DHT11/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../DHT11script/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Quick-start - Jiztom</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Quick-start";
+    var mkdocs_page_input_path = "quickstart.md";
+    var mkdocs_page_url = "/quickstart/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Jiztom</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../raspberrypi/">RaspberryPi</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Quick-start</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#quick-start-beginer">Quick Start -beginer</a></li>
+                
+                    <li><a class="toctree-l4" href="#what-you-will-need">What you will need</a></li>
+                
+                    <li><a class="toctree-l4" href="#plugging-in-your-raspberry-pi">Plugging in your Raspberry Pi</a></li>
+                
+                    <li><a class="toctree-l4" href="#logging-into-your-raspberry-pi">Logging into your Raspberry Pi</a></li>
+                
+                    <li><a class="toctree-l4" href="#setup-your-raspberry-pi">Setup your Raspberry Pi</a></li>
+                
+                    <li><a class="toctree-l4" href="#connecting-your-raspberry-pi-through-wifi">Connecting your Raspberry Pi through WiFi.</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../DH11/">DHT11</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../setting_up_DHT11/">Setting up DHT11 sensor</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../ubidots/">Ubidots</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../DHT11script/">DHT11 python script</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../check/">Check</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../launcher/">Autostart enabling</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../about/">About</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Jiztom</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Quick-start</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="quick-start-beginer">Quick Start -beginer</h1>
+<p>There is a more detailed version for advanced users below this section</p>
+<h3 id="what-you-will-need">What you will need</h3>
+<h4 id="required">Required</h4>
+<ul>
+<li><b>SD Card</b>
+   <p>We recommend an 8GB class 10 SD card – ideally preinstalled 
+   with NOOBS. You can buy a card with NOOBS pre-installed, or you 
+   can download it for free from our downloads page.</p><br></li>
+<li><b>Display and connectivity cables</b>
+   <p>Any HDMI/DVI monitor or TV should work as a display for the 
+   Pi . For best results, use one with HDMI input, but other 
+   connections are available for older devices. Use a standard 
+   Ethernet cable for internet access.</p><br></li>
+<li><b>Keyboard and mouse</b>
+   <p>Any standard USB keyboard and mouse will work with your 
+   Raspberry Pi.</p><br></li>
+<li><b>Power supply</b>
+   <p>Use a 5V micro USB power supply to power your Raspberry Pi. Be 
+   careful that whatever power supply you use outputs at least 5V; 
+   insufficient power will cause your Pi to behave in strange ways.</p><br></li>
+<li><b>Additional addons</b>
+   <p>we can also use an additional Wifi dongle in order to use the 
+   wifi and therby reduce the the no of wires connected to the pi.</p><br></li>
+</ul>
+<h3 id="plugging-in-your-raspberry-pi">Plugging in your Raspberry Pi</h3>
+<p>Before you plug anything into your Raspberry Pi, make sure that you 
+have all the equipment listed above to hand. Then follow these 
+instructions:</p>
+
+<ol>
+<li>Begin by slotting your SD card into the SD card slot on the Raspberry
+   Pi, which will only fit one way.</li>
+<li>Next, plug in your USB keyboard and Mouse into the USB slots on the 
+   Raspberry Pi.</li>
+<li>Make sure that your monitor or TV is turned on, and that you have 
+   selected the right input (e.g. HDMI 1, DVI, etc)</li>
+<li>Then connect your HDMI cable from your Raspberry Pi to your monitor 
+   or TV.</li>
+<li>If you intend to connect your Raspberry Pi to the internet, plug in 
+   an ethernet cable into the ethernet port next to the USB ports, 
+   otherwise skip this step.</li>
+<li>When you are happy that you have plugged in all the cables and SD 
+   card required, finally plug in the micro usb power supply. This 
+   action will turn on and boot your Raspberry Pi.</li>
+<li>If this is the first time your Raspberry Pi and NOOBS SD card have 
+   been used, then you will have to select an operating system and 
+   configure it. Follow the <a href="http://www.raspberrypi.org/help/noobs-setup/">NOOBS guide</a>
+   to do this.</li>
+</ol>
+<h3 id="logging-into-your-raspberry-pi">Logging into your Raspberry Pi</h3>
+<ol>
+<li>Once your Raspberry Pi has completed the boot process, a login prompt
+  will appear. The default login for Raspbian is username <code>pi</code> with the 
+  password <code>raspberry</code>. Note you will not see any writing appear when you 
+  type the password. This is a security feature in Linux.</li>
+<li>After you have successfully logged in, you will see the command line 
+  prompt <code>pi@raspberrypi~$</code></li>
+<li>To load the graphical user interface, type <code>startx</code> and press 
+  <b>Enter</b> on your keyboard.</li>
+</ol>
+<h2 id="setup-your-raspberry-pi">Setup your Raspberry Pi</h2>
+<p>If you have already done a basic setup of your Raspberry Pi you can jump this section, otherwise follow these steps:</p>
+<ol>
+<li>Download the Raspberry Pi operating system, we recommend Raspbian Wheezy.</li>
+<li>Unzip the file and you’ll end up with a large IMG file: DON’T COPY AND PASTE THIS FILE INTO YOUR SD CARD, because it won’t work. You’ll need to write it properly to the SD card by following these steps according to your operating system:<br>
+MacOS: <a href="http://ivanx.com/raspberrypi/">http://ivanx.com/raspberrypi/</a><br>
+Linux: <a href="http://elinux.org/RPi_Easy_SD_Card_Setup#Using_Linux_.28including_on_a_Pi.21.29">http://elinux.org/RPi_Easy_SD_Card_Setup#Using_Linux_.28including_on_a_Pi.21.29</a><br>
+Windows: <a href="http://elinux.org/RPi_Easy_SD_Card_Setup#Using_Windows_7_or_Windows_XP">http://elinux.org/RPi_Easy_SD_Card_Setup#Using_Windows_7_or_Windows_XP</a><br></li>
+<li>Plug a keyboard and a monitor through the HDMI or TV/Analog ports.</li>
+</ol>
+<h2 id="connecting-your-raspberry-pi-through-wifi">Connecting your Raspberry Pi through WiFi.</h2>
+<p>Your Raspberry Pi already has an Ethernet port, however, it can be turned into a wireless device by adding a USB WIFI dongle.</p>
+<p>Raspberry pi with USB WIFI dongle from EDIMAX<br>
+<img alt="dongle image" src="../img/ubidots3.jpg" /><br>
+Figure 1: Raspberry pi with USB WIFI dongle from EDIMAX<br>
+First, we’ll need to make sure your device is connected to the web through your local WIFI network:</p>
+<ol>
+<li>
+<p>Plug the USB WiFi Dongle, then restart your RasPi.</p>
+</li>
+<li>
+<p>Login to the device using your credentials, typically as follows:</p>
+<pre><code>user: pi
+password: raspberry
+</code></pre>
+<p>Open this file from the console:</p>
+<pre><code>$ sudo nano /etc/network/interfaces
+</code></pre>
+</li>
+<li>
+<p>Modify the file so that it looks like this:</p>
+<pre><code>auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet dhcp
+
+auto wlan0
+iface wlan0 inet dhcp
+wpa-ssid "YOUR WIFI NETWORK NAME"
+wpa-psk "YOUR WIFI PASSWORD"
+</code></pre>
+</li>
+<li>
+<p>Reboot your device.</p>
+<pre><code>$ sudo reboot
+</code></pre>
+</li>
+<li>
+<p>Verify the WiFi connection. You must be able to see an IP address assigned to the ‘wlan0’ interface.</p>
+<pre><code>$ sudo ifconfig wlan0
+</code></pre>
+</li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../DH11/" class="btn btn-neutral float-right" title="DHT11">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../raspberrypi/" class="btn btn-neutral" title="RaspberryPi"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../raspberrypi/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../DH11/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

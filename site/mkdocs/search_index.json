@@ -1,0 +1,204 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Temperature-Humidity sensing and data loading\n\n\nAbstract\n\n\nTo take up real-time values from teh desired location and push it up to the cloud database from where it can be accessed or processed to obtain the required data.It was decided to use Raspberry pi 2 as the embedded linux platform and DHT11 as the temperature and humidity sensor.\n\n\n\n\nHere instead of the JSON or custom made Apache webserver we will be making use of \nUbidots", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#temperature-humidity-sensing-and-data-loading", 
+            "text": "", 
+            "title": "Temperature-Humidity sensing and data loading"
+        }, 
+        {
+            "location": "/#abstract", 
+            "text": "To take up real-time values from teh desired location and push it up to the cloud database from where it can be accessed or processed to obtain the required data.It was decided to use Raspberry pi 2 as the embedded linux platform and DHT11 as the temperature and humidity sensor.   Here instead of the JSON or custom made Apache webserver we will be making use of  Ubidots", 
+            "title": "Abstract"
+        }, 
+        {
+            "location": "/raspberrypi/", 
+            "text": "RaspberryPi2\n\n\nIntroduction\n\n\nRaspberry Pi has become a widely used device, not only for prototyping and educational purposes, but also for production projects within companies.\n\n\nBest described as a pocket-size $25 computer, it features all the components and peripherals needed to perform most tasks your desktop PC would do, like spreadsheets, word-processing and games.\n\n\nBesides its small size, low cost and fully operational Linux OS, the greatest difference from your Destkop PC lies in its ability to interact with other peripherals through GPIO pins (General Purpose Input/Ourput Pins).\n\n\nThis allows you to code pretty robust hardware applications without having to be an expert in embedded electronics.\n\n\nUnderstanding GPIO pins\n\n\n\n\n\n\nGPIO stands for General Purpose Input/Output and on the Raspberry Pi they are the physical interface between the software side of the Raspberry PI and the outside world. We will need to use the GPIO pins to connect to the DHT11 and the Photoresistor.\n\n\nDifferent versions of the Raspberry Pi have a different amount of GPIO pins. In early versions of the Raspberry Pi there were 26 pins and the more recent versions have 40 pins. Even though more pins were added, pins 1 through 26 are the same on all versions. When you look at a reference for Raspberry Pi GPIO pins you will will find several notations for each pin. Most commonly you will find one reference for the physical name of the pin (1 to 40) and the other for the GPIO Name (GPIO1, etc). The physical name is just that, the physical ordered number of the pin. With Python we will be using the GPIO reference for our pin identification. The GPIO Name is designated from the chip set and more commonly used in advanced projects.\n\n\nReferencing the wrong GPIO Pin number is very common and if you are not getting the results you expect when working with GPIO, double check the pin you are connected to and the pin you are referencing in your code.", 
+            "title": "RaspberryPi"
+        }, 
+        {
+            "location": "/raspberrypi/#raspberrypi2", 
+            "text": "", 
+            "title": "RaspberryPi2"
+        }, 
+        {
+            "location": "/raspberrypi/#introduction", 
+            "text": "Raspberry Pi has become a widely used device, not only for prototyping and educational purposes, but also for production projects within companies.  Best described as a pocket-size $25 computer, it features all the components and peripherals needed to perform most tasks your desktop PC would do, like spreadsheets, word-processing and games.  Besides its small size, low cost and fully operational Linux OS, the greatest difference from your Destkop PC lies in its ability to interact with other peripherals through GPIO pins (General Purpose Input/Ourput Pins).  This allows you to code pretty robust hardware applications without having to be an expert in embedded electronics.", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/raspberrypi/#understanding-gpio-pins", 
+            "text": "GPIO stands for General Purpose Input/Output and on the Raspberry Pi they are the physical interface between the software side of the Raspberry PI and the outside world. We will need to use the GPIO pins to connect to the DHT11 and the Photoresistor.  Different versions of the Raspberry Pi have a different amount of GPIO pins. In early versions of the Raspberry Pi there were 26 pins and the more recent versions have 40 pins. Even though more pins were added, pins 1 through 26 are the same on all versions. When you look at a reference for Raspberry Pi GPIO pins you will will find several notations for each pin. Most commonly you will find one reference for the physical name of the pin (1 to 40) and the other for the GPIO Name (GPIO1, etc). The physical name is just that, the physical ordered number of the pin. With Python we will be using the GPIO reference for our pin identification. The GPIO Name is designated from the chip set and more commonly used in advanced projects.  Referencing the wrong GPIO Pin number is very common and if you are not getting the results you expect when working with GPIO, double check the pin you are connected to and the pin you are referencing in your code.", 
+            "title": "Understanding GPIO pins"
+        }, 
+        {
+            "location": "/quickstart/", 
+            "text": "Quick Start -beginer\n\n\nThere is a more detailed version for advanced users below this section\n\n\nWhat you will need\n\n\nRequired\n\n\n\n\nSD Card\n\n   \nWe recommend an 8GB class 10 SD card \u2013 ideally preinstalled \n   with NOOBS. You can buy a card with NOOBS pre-installed, or you \n   can download it for free from our downloads page.\n\n\nDisplay and connectivity cables\n\n   \nAny HDMI/DVI monitor or TV should work as a display for the \n   Pi . For best results, use one with HDMI input, but other \n   connections are available for older devices. Use a standard \n   Ethernet cable for internet access.\n\n\nKeyboard and mouse\n\n   \nAny standard USB keyboard and mouse will work with your \n   Raspberry Pi.\n\n\nPower supply\n\n   \nUse a 5V micro USB power supply to power your Raspberry Pi. Be \n   careful that whatever power supply you use outputs at least 5V; \n   insufficient power will cause your Pi to behave in strange ways.\n\n\nAdditional addons\n\n   \nwe can also use an additional Wifi dongle in order to use the \n   wifi and therby reduce the the no of wires connected to the pi.\n\n\n\n\nPlugging in your Raspberry Pi\n\n\nBefore you plug anything into your Raspberry Pi, make sure that you \nhave all the equipment listed above to hand. Then follow these \ninstructions:\n\n\n\n\n\nBegin by slotting your SD card into the SD card slot on the Raspberry\n   Pi, which will only fit one way.\n\n\nNext, plug in your USB keyboard and Mouse into the USB slots on the \n   Raspberry Pi.\n\n\nMake sure that your monitor or TV is turned on, and that you have \n   selected the right input (e.g. HDMI 1, DVI, etc)\n\n\nThen connect your HDMI cable from your Raspberry Pi to your monitor \n   or TV.\n\n\nIf you intend to connect your Raspberry Pi to the internet, plug in \n   an ethernet cable into the ethernet port next to the USB ports, \n   otherwise skip this step.\n\n\nWhen you are happy that you have plugged in all the cables and SD \n   card required, finally plug in the micro usb power supply. This \n   action will turn on and boot your Raspberry Pi.\n\n\nIf this is the first time your Raspberry Pi and NOOBS SD card have \n   been used, then you will have to select an operating system and \n   configure it. Follow the \nNOOBS guide\n\n   to do this.\n\n\n\n\nLogging into your Raspberry Pi\n\n\n\n\nOnce your Raspberry Pi has completed the boot process, a login prompt\n  will appear. The default login for Raspbian is username \npi\n with the \n  password \nraspberry\n. Note you will not see any writing appear when you \n  type the password. This is a security feature in Linux.\n\n\nAfter you have successfully logged in, you will see the command line \n  prompt \npi@raspberrypi~$\n\n\nTo load the graphical user interface, type \nstartx\n and press \n  \nEnter\n on your keyboard.\n\n\n\n\nSetup your Raspberry Pi\n\n\nIf you have already done a basic setup of your Raspberry Pi you can jump this section, otherwise follow these steps:\n\n\n\n\nDownload the Raspberry Pi operating system, we recommend Raspbian Wheezy.\n\n\nUnzip the file and you\u2019ll end up with a large IMG file: DON\u2019T COPY AND PASTE THIS FILE INTO YOUR SD CARD, because it won\u2019t work. You\u2019ll need to write it properly to the SD card by following these steps according to your operating system:\n\nMacOS: \nhttp://ivanx.com/raspberrypi/\n\nLinux: \nhttp://elinux.org/RPi_Easy_SD_Card_Setup#Using_Linux_.28including_on_a_Pi.21.29\n\nWindows: \nhttp://elinux.org/RPi_Easy_SD_Card_Setup#Using_Windows_7_or_Windows_XP\n\n\nPlug a keyboard and a monitor through the HDMI or TV/Analog ports.\n\n\n\n\nConnecting your Raspberry Pi through WiFi.\n\n\nYour Raspberry Pi already has an Ethernet port, however, it can be turned into a wireless device by adding a USB WIFI dongle.\n\n\nRaspberry pi with USB WIFI dongle from EDIMAX\n\n\n\nFigure 1: Raspberry pi with USB WIFI dongle from EDIMAX\n\nFirst, we\u2019ll need to make sure your device is connected to the web through your local WIFI network:\n\n\n\n\n\n\nPlug the USB WiFi Dongle, then restart your RasPi.\n\n\n\n\n\n\nLogin to the device using your credentials, typically as follows:\n\n\nuser: pi\npassword: raspberry\n\n\n\nOpen this file from the console:\n\n\n$ sudo nano /etc/network/interfaces\n\n\n\n\n\n\n\nModify the file so that it looks like this:\n\n\nauto lo\niface lo inet loopback\n\nauto eth0\niface eth0 inet dhcp\n\nauto wlan0\niface wlan0 inet dhcp\nwpa-ssid \"YOUR WIFI NETWORK NAME\"\nwpa-psk \"YOUR WIFI PASSWORD\"\n\n\n\n\n\n\n\nReboot your device.\n\n\n$ sudo reboot\n\n\n\n\n\n\n\nVerify the WiFi connection. You must be able to see an IP address assigned to the \u2018wlan0\u2019 interface.\n\n\n$ sudo ifconfig wlan0", 
+            "title": "Quick-start"
+        }, 
+        {
+            "location": "/quickstart/#quick-start-beginer", 
+            "text": "There is a more detailed version for advanced users below this section", 
+            "title": "Quick Start -beginer"
+        }, 
+        {
+            "location": "/quickstart/#what-you-will-need", 
+            "text": "", 
+            "title": "What you will need"
+        }, 
+        {
+            "location": "/quickstart/#required", 
+            "text": "SD Card \n    We recommend an 8GB class 10 SD card \u2013 ideally preinstalled \n   with NOOBS. You can buy a card with NOOBS pre-installed, or you \n   can download it for free from our downloads page.  Display and connectivity cables \n    Any HDMI/DVI monitor or TV should work as a display for the \n   Pi . For best results, use one with HDMI input, but other \n   connections are available for older devices. Use a standard \n   Ethernet cable for internet access.  Keyboard and mouse \n    Any standard USB keyboard and mouse will work with your \n   Raspberry Pi.  Power supply \n    Use a 5V micro USB power supply to power your Raspberry Pi. Be \n   careful that whatever power supply you use outputs at least 5V; \n   insufficient power will cause your Pi to behave in strange ways.  Additional addons \n    we can also use an additional Wifi dongle in order to use the \n   wifi and therby reduce the the no of wires connected to the pi.", 
+            "title": "Required"
+        }, 
+        {
+            "location": "/quickstart/#plugging-in-your-raspberry-pi", 
+            "text": "Before you plug anything into your Raspberry Pi, make sure that you \nhave all the equipment listed above to hand. Then follow these \ninstructions:   Begin by slotting your SD card into the SD card slot on the Raspberry\n   Pi, which will only fit one way.  Next, plug in your USB keyboard and Mouse into the USB slots on the \n   Raspberry Pi.  Make sure that your monitor or TV is turned on, and that you have \n   selected the right input (e.g. HDMI 1, DVI, etc)  Then connect your HDMI cable from your Raspberry Pi to your monitor \n   or TV.  If you intend to connect your Raspberry Pi to the internet, plug in \n   an ethernet cable into the ethernet port next to the USB ports, \n   otherwise skip this step.  When you are happy that you have plugged in all the cables and SD \n   card required, finally plug in the micro usb power supply. This \n   action will turn on and boot your Raspberry Pi.  If this is the first time your Raspberry Pi and NOOBS SD card have \n   been used, then you will have to select an operating system and \n   configure it. Follow the  NOOBS guide \n   to do this.", 
+            "title": "Plugging in your Raspberry Pi"
+        }, 
+        {
+            "location": "/quickstart/#logging-into-your-raspberry-pi", 
+            "text": "Once your Raspberry Pi has completed the boot process, a login prompt\n  will appear. The default login for Raspbian is username  pi  with the \n  password  raspberry . Note you will not see any writing appear when you \n  type the password. This is a security feature in Linux.  After you have successfully logged in, you will see the command line \n  prompt  pi@raspberrypi~$  To load the graphical user interface, type  startx  and press \n   Enter  on your keyboard.", 
+            "title": "Logging into your Raspberry Pi"
+        }, 
+        {
+            "location": "/quickstart/#setup-your-raspberry-pi", 
+            "text": "If you have already done a basic setup of your Raspberry Pi you can jump this section, otherwise follow these steps:   Download the Raspberry Pi operating system, we recommend Raspbian Wheezy.  Unzip the file and you\u2019ll end up with a large IMG file: DON\u2019T COPY AND PASTE THIS FILE INTO YOUR SD CARD, because it won\u2019t work. You\u2019ll need to write it properly to the SD card by following these steps according to your operating system: \nMacOS:  http://ivanx.com/raspberrypi/ \nLinux:  http://elinux.org/RPi_Easy_SD_Card_Setup#Using_Linux_.28including_on_a_Pi.21.29 \nWindows:  http://elinux.org/RPi_Easy_SD_Card_Setup#Using_Windows_7_or_Windows_XP  Plug a keyboard and a monitor through the HDMI or TV/Analog ports.", 
+            "title": "Setup your Raspberry Pi"
+        }, 
+        {
+            "location": "/quickstart/#connecting-your-raspberry-pi-through-wifi", 
+            "text": "Your Raspberry Pi already has an Ethernet port, however, it can be turned into a wireless device by adding a USB WIFI dongle.  Raspberry pi with USB WIFI dongle from EDIMAX  \nFigure 1: Raspberry pi with USB WIFI dongle from EDIMAX \nFirst, we\u2019ll need to make sure your device is connected to the web through your local WIFI network:    Plug the USB WiFi Dongle, then restart your RasPi.    Login to the device using your credentials, typically as follows:  user: pi\npassword: raspberry  Open this file from the console:  $ sudo nano /etc/network/interfaces    Modify the file so that it looks like this:  auto lo\niface lo inet loopback\n\nauto eth0\niface eth0 inet dhcp\n\nauto wlan0\niface wlan0 inet dhcp\nwpa-ssid \"YOUR WIFI NETWORK NAME\"\nwpa-psk \"YOUR WIFI PASSWORD\"    Reboot your device.  $ sudo reboot    Verify the WiFi connection. You must be able to see an IP address assigned to the \u2018wlan0\u2019 interface.  $ sudo ifconfig wlan0", 
+            "title": "Connecting your Raspberry Pi through WiFi."
+        }, 
+        {
+            "location": "/DH11/", 
+            "text": "DHT11\n\n\n             \n\n\nIt is one of the most cheapest and most easily accquired sensor in the \nmarket with a good range for practical conditions.And has a wide support\nas well as easy calculation of sensor data.\n\n\n\nThis DFRobot DHT11 Temperature \n&\n Humidity Sensor features a \ntemperature \n&\n humidity sensor complex with a calibrated digital signal \noutput. By using the exclusive digital-signal-acquisition technique and \ntemperature \n&\n humidity sensing technology, it ensures high reliability \nand excellent long-term stability. This sensor includes a resistive-type \nhumidity measurement component and an NTC temperature measurement \ncomponent, and connects to a high- performance 8-bit microcontroller, \noffering excellent quality, fast response, anti-interference ability and \ncost-effectiveness.\n\n\n\nSpecifications\n\n\n\n\ntypical application\n\n\n\n\nNote: 3Pin \u2013 Null; MCU = Micro-computer Unite or single chip Computer \nWhen the connecting cable is shorter than 20 metres, a 5K pull-up \nresistor is recommended; when the connecting cable is longer than 20 \nmetres, choose a appropriate pull-up resistor as needed.\n\n\n\nreference from \nwikipedia", 
+            "title": "DHT11"
+        }, 
+        {
+            "location": "/DH11/#dht11", 
+            "text": "It is one of the most cheapest and most easily accquired sensor in the \nmarket with a good range for practical conditions.And has a wide support\nas well as easy calculation of sensor data.  This DFRobot DHT11 Temperature  &  Humidity Sensor features a \ntemperature  &  humidity sensor complex with a calibrated digital signal \noutput. By using the exclusive digital-signal-acquisition technique and \ntemperature  &  humidity sensing technology, it ensures high reliability \nand excellent long-term stability. This sensor includes a resistive-type \nhumidity measurement component and an NTC temperature measurement \ncomponent, and connects to a high- performance 8-bit microcontroller, \noffering excellent quality, fast response, anti-interference ability and \ncost-effectiveness.", 
+            "title": "DHT11"
+        }, 
+        {
+            "location": "/DH11/#specifications", 
+            "text": "", 
+            "title": "Specifications"
+        }, 
+        {
+            "location": "/DH11/#typical-application", 
+            "text": "Note: 3Pin \u2013 Null; MCU = Micro-computer Unite or single chip Computer \nWhen the connecting cable is shorter than 20 metres, a 5K pull-up \nresistor is recommended; when the connecting cable is longer than 20 \nmetres, choose a appropriate pull-up resistor as needed.  reference from  wikipedia", 
+            "title": "typical application"
+        }, 
+        {
+            "location": "/setting_up_DHT11/", 
+            "text": "Interfacing\n\n\nWiring up the DHT Humidity sensors\n\n\nIts easy to connect these sensors to your Raspberry Pi. Our code can \nuse any GPIO pin, but we'll be using GPIO #4 for our diagrams and code. \nOnce you have it working, you can simply adapt the code to change to any \nother GPIO pin (e.g. pin #18). You can also have as many DHT sensors as \nyou want but they cannot share the data pin - each sensor needs a unique \ndata pin!\n\n\n\nFor DHT11 and DHT22 sensors, don't forget to connect a `4.7K - 10K` \nresistor from the data pin to VCC\n\n\n\n if 4.7K doesnt work, try 10K\nNow this is the layout on a breadboard.\n\n\n\nNow as an example of the wiring we have the wiring of the DHT11 to an \nOlder version of Raspberry pi.Here note that the connections are made to \n\nGPO #4\n as \nDATA IN\n.Along with + Vcc and GND.\n\n\n\nReference \nAdaFruit-Logging using GDocs\n.", 
+            "title": "Setting up DHT11 sensor"
+        }, 
+        {
+            "location": "/setting_up_DHT11/#interfacing", 
+            "text": "", 
+            "title": "Interfacing"
+        }, 
+        {
+            "location": "/setting_up_DHT11/#wiring-up-the-dht-humidity-sensors", 
+            "text": "Its easy to connect these sensors to your Raspberry Pi. Our code can \nuse any GPIO pin, but we'll be using GPIO #4 for our diagrams and code. \nOnce you have it working, you can simply adapt the code to change to any \nother GPIO pin (e.g. pin #18). You can also have as many DHT sensors as \nyou want but they cannot share the data pin - each sensor needs a unique \ndata pin!  For DHT11 and DHT22 sensors, don't forget to connect a `4.7K - 10K` \nresistor from the data pin to VCC   if 4.7K doesnt work, try 10K\nNow this is the layout on a breadboard.  Now as an example of the wiring we have the wiring of the DHT11 to an \nOlder version of Raspberry pi.Here note that the connections are made to  GPO #4  as  DATA IN .Along with + Vcc and GND.  Reference  AdaFruit-Logging using GDocs .", 
+            "title": "Wiring up the DHT Humidity sensors"
+        }, 
+        {
+            "location": "/ubidots/", 
+            "text": "Ubidots\n\n\nWhat is Ubidots?\n\n\nUbidots helps you create applications that capture real-world data \nand turn it into meaningful actions and insights.\n\n\n\n\nThey think that we shouldn\u2019t have to be a web/data expert, or hire \none,in order to stream your sensor data to the cloud and extract its \nfull value through real-time visualizations.\n\n\nGlossary\n\n\nBefore you get started with our API, here are a few concepts your \nshould get familiar with:\n\n\n Data Source\n\n  \nA data source is your connected device. Every data source can have \n  one or more variables, each one containing values in a time series. \n  For example, a \u201cSmart Sprinkler\u201d would be a data source, while its \n  variables would be soil humidity and temperature.\n\n\nVariable\n\n  \nA variable is a series of data that change over time. For example, \n  a bike\u2019s variables could be speed and GPS.\n\n\nValue\n\n  \nThe measurement of the variable at a given point in time. For \n  example, \u201cthe value of the room\u2019s temperature was 70\u00b0F at 15:02:33 \n  EDT\u201d\n\n\nEvent\n\n  \nEvents are \u201cIF ... THEN ...\u201d statements that are triggered \n  depending of the last value of a variable. For example, you can set \n  your sprinkler to send you an SMS if the humidity level is above a \n  given value.\n\n\nWidget\n\n  \nWidgets are custom visualizations of your data that help you \n  extract the value of it. You can condense a whole data set into one \n  meaningful sentence, map or graph. For example, if a variable measures \n  how many people looks at a product on a shelf,then use the \u201cStatement\u201d \n  widget to display something like: \u201cA total of 4.503 people have looked \n  at the monkey in the display case\u201d.\n\n\nUbidots Python API Client.\n\n\nThe Ubidots Python API Client makes calls to the Ubidots Api. \nThe module is available on PyPI as \u201cubidots\u201d.\n\n\nTo follow this quickstart you\u2019ll need to have pyton 2.7 in your \nmachine (be it a computer or an python-capable device), which you can \ndownload at \nwww.python.org\n\n\nInstalling the Python library\n\n\nUbidots for python is available in PyPI and you can install it from the \ncommand line:\n\n\n$ pip install ubidots==1.6.3\n\n\n\nDon\u2019t forget to use sudo if necessary.\nYou can install pip in Linux and Mac using this command:\n\n\n$ sudo easy_install pip\n\n\n\nIf you don\u2019t have easy_install, you can get it through apt-get on \nDebian-based distributions:\n\n\n$ sudo apt-get install python-setuptools\n\n\n\nIf you are using Microsoft Windows you can install pip from \n\nhere\n.\n\n\nConfigure your Raspberry Pi to Ubidots cloud\n\n\n\n\n\n\nLet\u2019s make sure your device is up to date so that it has the latest python tools (be aware that this will take a while):\n\n\n$ sudo apt-get update\n$ sudo apt-get upgrade\n\n\n\n\n\n\n\nDownload the pip installer and install Ubidots\u2019 Python library\n\n\n$ sudo apt-get install python-setuptools\n$ sudo easy_install pip\n$ sudo pip install ubidots\n\n\n\n\n\n\n\nSetup a test Variable in Ubidots\n\n\n\n\nAs a \nlogged in user\n navigate to the \n\u201cData\u201d\n tab.\n\n\nCreate a Data Source by clicking on the orange icon on the right. Then create a variable within that Data Source.\n\n\nTake note of the variable\u2019s ID to which you want to send data. For this example we\u2019ll use a variable with the ID: \u201c521d792df91b2816f35c8587\u201d\n\n\nTake note of your \nAPI key\n.\n\n\n\n\nSend data to Ubidots\n\n\nComing back to your Raspberry Pi:\n\n\n\n\n\n\nCreate a directory called \u201cubidots\u201d where you can put this and future scripts:\n\n\n$ mkdir ubidots\n\n\n\nCreate a python script using your favorite text-editor. We\u2019ll use \u201cnano\u201d in this case:\n\n\n$ cd ubidots\n$ nano ubi-test.py\n\n\n\n\n\n\n\nPut the following code into the created file. Please note the fields where you should put your API key and your variable ID.\n\n\nfrom ubidots import ApiClient\nimport random\n######Create an \"API\" object\napi = ApiClient(\"7fj39fk3044045k89fbh34rsd9823jkfs8323\")\n######Create a \"Variable\" object\ntest_variable = api.get_variable(\"521d792df91b2816f35c8587\")\n######Here is where you usually put the code to capture the data, either through your GPIO pins or as a calculation. We'll simply put a random value here:\ntest_value = random.randint(1,100)\n######Write the value to your variable in Ubidots\ntest_variable.save_value({'value':test_value})\n\n\n\n\n\n\n\nRun the code several times to send some random values to the cloud:\n\n\n$ python ubi-test.py\n\n\n\nYou should now see some data-points in your browser!\n\n\n\n\n\n\n\nOnce your data is in the cloud, it\u2019s all down the hill. You can trigger events according to your data, create insights to share, etc.", 
+            "title": "Ubidots"
+        }, 
+        {
+            "location": "/ubidots/#ubidots", 
+            "text": "", 
+            "title": "Ubidots"
+        }, 
+        {
+            "location": "/ubidots/#what-is-ubidots", 
+            "text": "Ubidots helps you create applications that capture real-world data \nand turn it into meaningful actions and insights.   They think that we shouldn\u2019t have to be a web/data expert, or hire \none,in order to stream your sensor data to the cloud and extract its \nfull value through real-time visualizations.", 
+            "title": "What is Ubidots?"
+        }, 
+        {
+            "location": "/ubidots/#glossary", 
+            "text": "Before you get started with our API, here are a few concepts your \nshould get familiar with:   Data Source \n   A data source is your connected device. Every data source can have \n  one or more variables, each one containing values in a time series. \n  For example, a \u201cSmart Sprinkler\u201d would be a data source, while its \n  variables would be soil humidity and temperature.  Variable \n   A variable is a series of data that change over time. For example, \n  a bike\u2019s variables could be speed and GPS.  Value \n   The measurement of the variable at a given point in time. For \n  example, \u201cthe value of the room\u2019s temperature was 70\u00b0F at 15:02:33 \n  EDT\u201d  Event \n   Events are \u201cIF ... THEN ...\u201d statements that are triggered \n  depending of the last value of a variable. For example, you can set \n  your sprinkler to send you an SMS if the humidity level is above a \n  given value.  Widget \n   Widgets are custom visualizations of your data that help you \n  extract the value of it. You can condense a whole data set into one \n  meaningful sentence, map or graph. For example, if a variable measures \n  how many people looks at a product on a shelf,then use the \u201cStatement\u201d \n  widget to display something like: \u201cA total of 4.503 people have looked \n  at the monkey in the display case\u201d.", 
+            "title": "Glossary"
+        }, 
+        {
+            "location": "/ubidots/#ubidots-python-api-client", 
+            "text": "The Ubidots Python API Client makes calls to the Ubidots Api. \nThe module is available on PyPI as \u201cubidots\u201d.  To follow this quickstart you\u2019ll need to have pyton 2.7 in your \nmachine (be it a computer or an python-capable device), which you can \ndownload at  www.python.org", 
+            "title": "Ubidots Python API Client."
+        }, 
+        {
+            "location": "/ubidots/#installing-the-python-library", 
+            "text": "Ubidots for python is available in PyPI and you can install it from the \ncommand line:  $ pip install ubidots==1.6.3  Don\u2019t forget to use sudo if necessary.\nYou can install pip in Linux and Mac using this command:  $ sudo easy_install pip  If you don\u2019t have easy_install, you can get it through apt-get on \nDebian-based distributions:  $ sudo apt-get install python-setuptools  If you are using Microsoft Windows you can install pip from  here .", 
+            "title": "Installing the Python library"
+        }, 
+        {
+            "location": "/ubidots/#configure-your-raspberry-pi-to-ubidots-cloud", 
+            "text": "Let\u2019s make sure your device is up to date so that it has the latest python tools (be aware that this will take a while):  $ sudo apt-get update\n$ sudo apt-get upgrade    Download the pip installer and install Ubidots\u2019 Python library  $ sudo apt-get install python-setuptools\n$ sudo easy_install pip\n$ sudo pip install ubidots", 
+            "title": "Configure your Raspberry Pi to Ubidots cloud"
+        }, 
+        {
+            "location": "/ubidots/#setup-a-test-variable-in-ubidots", 
+            "text": "As a  logged in user  navigate to the  \u201cData\u201d  tab.  Create a Data Source by clicking on the orange icon on the right. Then create a variable within that Data Source.  Take note of the variable\u2019s ID to which you want to send data. For this example we\u2019ll use a variable with the ID: \u201c521d792df91b2816f35c8587\u201d  Take note of your  API key .", 
+            "title": "Setup a test Variable in Ubidots"
+        }, 
+        {
+            "location": "/ubidots/#send-data-to-ubidots", 
+            "text": "Coming back to your Raspberry Pi:    Create a directory called \u201cubidots\u201d where you can put this and future scripts:  $ mkdir ubidots  Create a python script using your favorite text-editor. We\u2019ll use \u201cnano\u201d in this case:  $ cd ubidots\n$ nano ubi-test.py    Put the following code into the created file. Please note the fields where you should put your API key and your variable ID.  from ubidots import ApiClient\nimport random\n######Create an \"API\" object\napi = ApiClient(\"7fj39fk3044045k89fbh34rsd9823jkfs8323\")\n######Create a \"Variable\" object\ntest_variable = api.get_variable(\"521d792df91b2816f35c8587\")\n######Here is where you usually put the code to capture the data, either through your GPIO pins or as a calculation. We'll simply put a random value here:\ntest_value = random.randint(1,100)\n######Write the value to your variable in Ubidots\ntest_variable.save_value({'value':test_value})    Run the code several times to send some random values to the cloud:  $ python ubi-test.py  You should now see some data-points in your browser!    Once your data is in the cloud, it\u2019s all down the hill. You can trigger events according to your data, create insights to share, etc.", 
+            "title": "Send data to Ubidots"
+        }, 
+        {
+            "location": "/DHT11script/", 
+            "text": "The Python Script\n\n\nThe following is the code that was used to upload the temperature and sensor data.\nIt uses the \ndht11.py\n extensive as teh support file which needs to be downloaded from \nhere\n\n\nNow the following is the code used to push the data from DHT11 to ubidots.\n\n\nfrom ubidots import ApiClient\nimport random\nimport RPi.GPIO as GPIO\nimport dht11\nimport time\nimport datetime\n\n#Create an \"API\" object\n\napi = ApiClient(\"18519feca06c452098f1cf2aae432f58ae088c37\")\n\n#Create a \"Variable\" object\n\ntemp = api.get_variable(\"56ba09f1762542160640c29a\")\nhumi = api.get_variable(\"56ba136d7625426c9967d2b5\")\n#Here is where you usually put the code to capture the data, either through your GPIO pins or as a calculation. We'll simply put a random value here:\n\nGPIO.setwarnings(False)\nGPIO.setmode(GPIO.BCM)\nGPIO.cleanup()\n\n# read data using pin 4\ninstance = dht11.DHT11(pin = 4)\n\nwhile True:\n    result = instance.read()\n    if result.is_valid():\n        print(\"Last valid input: \" + str(datetime.datetime.now()))\n        print(\"Temperature: %d C\" % result.temperature)\n        print(\"Humidity: %d %%\" % result.humidity)\n        temperature = result.temperature\n        humidity = result.humidity\n        #Write the value to your variable in Ubidots\n        temp.save_value({'value':temperature})\n        humi.save_value({'value':humidity})\n    time.sleep(5)\n\n\n\nNow this is saved as the file \nubi-test.py\n.\nMake sure that the \ndht11.py\n is also in the same folder as the \nubi-test.py\n.\n\n\nNow to check wether the sensor is properly interfaced with the code try running it.\n\n\n$sudo python ubi-test.py\n\n\n\nWhich should give the output as\n\n\nLast valid input: 2016-03-02 21:20:12.238259\nTemperature: 30.8 C\nHumidity:    71.3 %\n\n\n\nThis should cycle in an infinite loop until the process is killed.This automatically pushes the data to ubidots.", 
+            "title": "DHT11 python script"
+        }, 
+        {
+            "location": "/DHT11script/#the-python-script", 
+            "text": "The following is the code that was used to upload the temperature and sensor data.\nIt uses the  dht11.py  extensive as teh support file which needs to be downloaded from  here  Now the following is the code used to push the data from DHT11 to ubidots.  from ubidots import ApiClient\nimport random\nimport RPi.GPIO as GPIO\nimport dht11\nimport time\nimport datetime\n\n#Create an \"API\" object\n\napi = ApiClient(\"18519feca06c452098f1cf2aae432f58ae088c37\")\n\n#Create a \"Variable\" object\n\ntemp = api.get_variable(\"56ba09f1762542160640c29a\")\nhumi = api.get_variable(\"56ba136d7625426c9967d2b5\")\n#Here is where you usually put the code to capture the data, either through your GPIO pins or as a calculation. We'll simply put a random value here:\n\nGPIO.setwarnings(False)\nGPIO.setmode(GPIO.BCM)\nGPIO.cleanup()\n\n# read data using pin 4\ninstance = dht11.DHT11(pin = 4)\n\nwhile True:\n    result = instance.read()\n    if result.is_valid():\n        print(\"Last valid input: \" + str(datetime.datetime.now()))\n        print(\"Temperature: %d C\" % result.temperature)\n        print(\"Humidity: %d %%\" % result.humidity)\n        temperature = result.temperature\n        humidity = result.humidity\n        #Write the value to your variable in Ubidots\n        temp.save_value({'value':temperature})\n        humi.save_value({'value':humidity})\n    time.sleep(5)  Now this is saved as the file  ubi-test.py .\nMake sure that the  dht11.py  is also in the same folder as the  ubi-test.py .  Now to check wether the sensor is properly interfaced with the code try running it.  $sudo python ubi-test.py  Which should give the output as  Last valid input: 2016-03-02 21:20:12.238259\nTemperature: 30.8 C\nHumidity:    71.3 %  This should cycle in an infinite loop until the process is killed.This automatically pushes the data to ubidots.", 
+            "title": "The Python Script"
+        }, 
+        {
+            "location": "/check/", 
+            "text": "Check up\n\n\nTo check up the DHT11 sensor.\n\n\nIn the terminal window:\n\n\n$cd \n$cd ubidots/\n$sudo python ubi-test.py\n\n\n\nThe output will be as follows:\n\n\nLast valid input: 2016-03-02 21:20:12.238259\nTemperature: 30.8 C\nHumidity:    71.3 %\n\n\n\nAnd it will continue to run as it is a infinte loop.\n\n\nTo break from the infinite loop just press \ncntrl + c\n\n\nAlso verify whether the value has been update in the \nubidots\n account.\nThe data present there should show values being updates as per the timing mentioned in the program.", 
+            "title": "Check"
+        }, 
+        {
+            "location": "/check/#check-up", 
+            "text": "", 
+            "title": "Check up"
+        }, 
+        {
+            "location": "/check/#to-check-up-the-dht11-sensor", 
+            "text": "In the terminal window:  $cd \n$cd ubidots/\n$sudo python ubi-test.py  The output will be as follows:  Last valid input: 2016-03-02 21:20:12.238259\nTemperature: 30.8 C\nHumidity:    71.3 %  And it will continue to run as it is a infinte loop.  To break from the infinite loop just press  cntrl + c  Also verify whether the value has been update in the  ubidots  account.\nThe data present there should show values being updates as per the timing mentioned in the program.", 
+            "title": "To check up the DHT11 sensor."
+        }, 
+        {
+            "location": "/launcher/", 
+            "text": "Making the python script run at boot\n\n\nNow to convert the pi as a stand alone embedded system i.e it will do the desired task if powered on.\n\n\nThis is achieved using the \ncrontab\n function of the linux kernel and a shell script.\n\n\n\n\n\n\nnow go to the directory which contains the target files.\n\n\n$cd /ubidots\n\n\n\n\n\n\n\nCreate a pyhton script called \nnew.py\n with the contents as\n\n\nimport time\ntime.sleep(10)\n\n\n\nTo induce a 10 sec delay of runnnig the ubi-test.py at boot up so all the required protocols and drivers will be up and running before the code is executed.\n\n\n\n\n\n\nCreate a new file called \nlauncher.sh\n . And input the following data\n\n\n$cd /\n$cd /home/pi/ubidots\n$sudo python new.py\n$sudo python ubi-test.py \n\n$cd /\n\n\n\n\n\n\n\nNow make the \nlauncher.sh\n as an executable file by\n\n\n$sudo chmod 755 launcher.sh\n\n\n\n\n\n\n\nNow try running the \nlauncher .sh\n\n\n$sudo sh launcher.sh\n\n\n\nwhich will result in the script in running after  a time interwal of 10 secs.\n\n\n\n\n\n\nNow edit the \ncrontab\n using\n        $crontab -e\nIt will look as follows\nand add these lines at the bottom\n\n\n@reboot sudo sh /home/pi/ubidots/launcher.sh\n\n\n\n\n\n\n\nnow save this and reboot the system using the command\n\n\n$sudo reboot\n\n\n\n\n\n\n\nNow the raspberry will reboot and the code will run as a background service.This need to be verified in two ways.\n\n\n\n\n\n\nFirstly use the following command to check wether the program is running or not.\n\n\n$ps aux | grep /home/pi/ubidots/ubi-test.py\n\n\n\n\n\n\n\nSecondly verify wether the value has beeen uploaded to the online \ncloud\n.", 
+            "title": "Autostart enabling"
+        }, 
+        {
+            "location": "/launcher/#making-the-python-script-run-at-boot", 
+            "text": "Now to convert the pi as a stand alone embedded system i.e it will do the desired task if powered on.  This is achieved using the  crontab  function of the linux kernel and a shell script.    now go to the directory which contains the target files.  $cd /ubidots    Create a pyhton script called  new.py  with the contents as  import time\ntime.sleep(10)  To induce a 10 sec delay of runnnig the ubi-test.py at boot up so all the required protocols and drivers will be up and running before the code is executed.    Create a new file called  launcher.sh  . And input the following data  $cd /\n$cd /home/pi/ubidots\n$sudo python new.py\n$sudo python ubi-test.py  \n$cd /    Now make the  launcher.sh  as an executable file by  $sudo chmod 755 launcher.sh    Now try running the  launcher .sh  $sudo sh launcher.sh  which will result in the script in running after  a time interwal of 10 secs.    Now edit the  crontab  using\n        $crontab -e\nIt will look as follows\nand add these lines at the bottom  @reboot sudo sh /home/pi/ubidots/launcher.sh    now save this and reboot the system using the command  $sudo reboot    Now the raspberry will reboot and the code will run as a background service.This need to be verified in two ways.    Firstly use the following command to check wether the program is running or not.  $ps aux | grep /home/pi/ubidots/ubi-test.py    Secondly verify wether the value has beeen uploaded to the online  cloud .", 
+            "title": "Making the python script run at boot"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "About the Author\n\n\nJiztom Francis K.\n\n311113106022\n\nIIIyr ECE\n\nLICET.", 
+            "title": "About"
+        }, 
+        {
+            "location": "/about/#about-the-author", 
+            "text": "Jiztom Francis K. \n311113106022 \nIIIyr ECE \nLICET.", 
+            "title": "About the Author"
+        }
+    ]
+}
