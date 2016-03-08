@@ -35,7 +35,7 @@ which will result in the script in running after  a time interwal of 10 secs.
 and add these lines at the bottom
 		
 		@reboot sh /home/pi/ubidots/launcher.sh > /home/pi/ubidots/logs/cronlog 2>&1
-It will look as follows
+It will look as follows<br>
 ![crontab-e](img/crontab-e.jpg)
 
 7. now save this and reboot the system using the command
