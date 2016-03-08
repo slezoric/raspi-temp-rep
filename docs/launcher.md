@@ -31,12 +31,13 @@ To induce a 10 sec delay of runnnig the ubi-test.py at boot up so all the requir
 which will result in the script in running after  a time interwal of 10 secs.
   
 6. Now edit the `crontab` using
-		$crontab -e
-It will look as follows
+		$sudo crontab -e
 and add these lines at the bottom
 		
-		@reboot sudo sh /home/pi/ubidots/launcher.sh
-		
+		@reboot sh /home/pi/ubidots/launcher.sh > /home/pi/ubidots/logs/cronlog 2>&1
+It will look as follows
+![crontab-e](img/crontab-e.jpg)
+
 7. now save this and reboot the system using the command
 		
 		$sudo reboot
